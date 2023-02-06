@@ -7,10 +7,10 @@ vim.g.maplocalleader = ' '
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 
 -- Diagnostic keymaps
-vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
-vim.keymap.set('n', ']d', vim.diagnostic.goto_next)
+vim.keymap.set('n', '<C-p>', vim.diagnostic.goto_prev)
+vim.keymap.set('n', '<C-n>', vim.diagnostic.goto_next)
 -- vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float)
-vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist)
+-- vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist)
 
 -- Format
 vim.keymap.set('n', '<leader>p', vim.cmd.Format)
