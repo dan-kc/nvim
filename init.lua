@@ -34,6 +34,9 @@ require('packer').startup(function(use)
     requires = { 'hrsh7th/cmp-nvim-lsp', 'L3MON4D3/LuaSnip', 'saadparwaiz1/cmp_luasnip' },
   }
 
+  -- Auto close brackets
+  use 'rstacruz/vim-closer'
+
   -- Comment
   use "terrortylor/nvim-comment"
 
@@ -54,6 +57,8 @@ require('packer').startup(function(use)
       pcall(require('nvim-treesitter.install').update { with_sync = true })
     end,
   }
+
+
 
   use { -- Additional text objects via treesitter
     'nvim-treesitter/nvim-treesitter-textobjects',

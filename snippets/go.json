@@ -2,24 +2,20 @@
 	"Testify Suite": {
 		"prefix": "suite",
 		"body": [
-			"package $1",
-			"",
 			"import (",
 			"\"github.com/stretchr/testify/suite\"",
 			"\"testing\"",
 			")",
 			"",
-			"type ${2:Subject}Suite struct {",
+			"type ${1:Subject}Suite struct {",
 			"suite.Suite",
-			"${3:subject} ${2:Subject}",
 			"}",
 			"",
-			"func Test${2:Subject}Suite(t *testing.T) {",
-			"suite.Run(t, new(${2:Subject}Suite))",
+			"func Test${1:Subject}Suite(t *testing.T) {",
+			"suite.Run(t, new(${1:Subject}Suite))",
 			"}",
 			"",
-			"func (s *${2:Subject}Suite) SetupTest() {",
-			"s.${3:subject} = ${2:Subject}{}",
+			"func (s *${1:Subject}Suite) SetupTest() {",
 			"}"
 		],
 		"description": "Boilerplate"
